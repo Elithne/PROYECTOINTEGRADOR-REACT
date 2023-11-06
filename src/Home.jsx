@@ -3,6 +3,7 @@ import Propiedad from "./Propiedad";
 import Ubicacion from "./Ubicacion";
 import Metros from "./Metros";
 import Button from "./Button";
+import Importe from "./Importe";
 import Footer from "./Footer";
 
 function Home(){
@@ -19,9 +20,7 @@ function Home(){
             <Ubicacion></Ubicacion>
             <Metros></Metros>
             <Button texto="Cotizar"></Button>
-            <div className="center separador">
-                <p className="importe">Precio estimado: $ <span id="valorPoliza">0.00</span><span className="guardar ocultar" title="Guardar en historial">owo</span></p>
-            </div>
+            <Importe></Importe>
         </div>
         <Footer></Footer>
         </>

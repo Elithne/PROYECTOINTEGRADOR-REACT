@@ -7,12 +7,12 @@ import './App.css'
 function App() {
   return (
     <>
-           <BrowserRouter>
-        <Routes>
-          <Route path="/" Component={Home} />
-          <Route path="/historial" Component={History} />
-          <Route path="*" Component={NotFound} />
-        </Routes>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" Component={Home} />
+            <Route path="/historial" Component={History} />
+            <Route path="*" Component={NotFound} />
+          </Routes>
       </BrowserRouter>
     </>
   )
