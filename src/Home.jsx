@@ -1,19 +1,23 @@
-import Header from "./Header";
-import Footer from "./Footer";
-import Selector from "./Selector";
+import { Link } from "react-router-dom"
+import Propiedad from "./Propiedad";
+import Ubicacion from "./Ubicacion";
+import Metros from "./Metros";
 import Button from "./Button";
+import Footer from "./Footer";
 
 function Home(){
     return(
         <>
-        <Header></Header>
-        <h1 className="center separador">Seguros del hogar</h1>
+        <header>
+            <h1 className="center separador">Seguros del hogar 🏡</h1>   
+            <div className="historial"><Link to="/Historial"><span title="Ver Historial">📋</span></Link>
+        </div>  
+            </header>
         <div className=" center div-cotizador">
             <h2 className="center separador">Completa los datos solicitados</h2>
-            <Selector texto="Selecciona el tipo de propiedad" labelSeleccionado="propiedad" idSeleccionado="propiedad"></Selector>
-            <Selector texto="Selecciona su Ubicación" labelSeleccionado="ubicacion" idSeleccionado="ubicacion"></Selector>
-            <label htmlFor="metros2">Ingresa los Metros Cuadrados:</label>
-            <input type="number" id="metros2" min="20" max="500" required/>
+            <Propiedad></Propiedad>
+            <Ubicacion></Ubicacion>
+            <Metros></Metros>
             <Button texto="Cotizar"></Button>
             <div className="center separador">
                 <p className="importe">Precio estimado: $ <span id="valorPoliza">0.00</span><span className="guardar ocultar" title="Guardar en historial">owo</span></p>
