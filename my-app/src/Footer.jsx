@@ -1,8 +1,5 @@
-
-export default function Footer(){
-    return(
-      <footer>
-        <p>Footer</p>
-      </footer>
-    )    
+function Footer(){
+    return <p>Hola</p>; 
 }
+
+export default Footer;
