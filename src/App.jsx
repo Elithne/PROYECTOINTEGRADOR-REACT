@@ -1,15 +1,20 @@
 import './App.css';
-import Footer from './Footer';
+import Home from './Home';
+import History from './History';
+import NotFound from './NotFound';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
-  const name = "John";
-  const hello = <h1>Hello, {name}!</h1>;
-  const mensaje = `Hello, ${name}`;
 
   return (
     <>
-      <h1 id="un-id" className="una-clase">{mensaje}</h1>
-      <Footer></Footer>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" Component={Home} />
+          <Route path="/historial" Component={History} />
+          <Route path="*" Component={NotFound} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
